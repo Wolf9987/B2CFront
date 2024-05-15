@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="card">
+                <form [formGroup]="newOrderForm" (ngSubmit)="onSubmit()">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">New Order</h5>
+                        <div class="mb-3 row">
+                            <label for="staticAmount" class="col-sm-2 col-form-label">Amount</label>
+                            <div class="col-sm-10">
+                            <input type="text" formControlName="amount" class="form-control" id="staticamount" value="">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticPrice" class="col-sm-2 col-form-label">Price</label>
+                            <div class="col-sm-10">
+                            <input type="text" formControlName="price" class="form-control" id="staticprice" value="">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputBuySell" class="col-sm-2 col-form-label">Buy/Sell</label>
+                            <div class="col-sm-10">
+                            <select formControlName="buySell" class="form-select" aria-label="Default select example" id="inputbuySell">
+                                <option selected>Select</option>
+                                <option value="buy">Buy</option>
+                                <option value="sell">Sell</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="!newOrderForm.valid">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
