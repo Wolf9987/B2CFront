@@ -1,2 +1,2 @@
 # B2CFront
-Angular 15
+Angular 15, jwt, Local storage management.
